@@ -1,3 +1,3 @@
 # Weather-Bot
-# Objective
+## Objective
 Implementation of a weather bot using Nodejs.
