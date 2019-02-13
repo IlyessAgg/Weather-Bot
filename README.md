@@ -1,5 +1,6 @@
 # Weather-Bot
 > Get the current weather anywhere in the world.
+
 ![Alt text](BotUsage.png?raw=true "Title")
 
 ## Objective
