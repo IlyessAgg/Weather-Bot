@@ -9,7 +9,6 @@ Here's how you should ask the current weather : ```What is the weather like in P
 It can also respond to questions like this : ```Will it rain in Paris tomorrow```\
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;```Will it be sunny the day after tomorrow in Paris```
 
-![Alt text](Botusage.png?raw=true "Title")
 <p align="center">
   <img src="Botusage.png" alt="UsageImage"/>
 </p>
