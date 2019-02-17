@@ -11,9 +11,9 @@ const matcher = require('./matcher');
 const weather = require('./weather');
 const clc = require('cli-color');
 
-async function getWeather(city){
+async function getWeather(city, nbrDays){
 	try{
-		let result = await weather(city);
+		let result = await weather(city, nbrDays);
 		return result;
 	}
 	catch(err){
@@ -27,6 +27,7 @@ rl.prompt();
 rl.on('line', reply => {
 	var cb = matcher(reply,cb);		
 	switch(cb.intent){
+		
 			case 'Hello':
 				console.log(" Hello there! I'm Ilyess's Bot :) What do you want from me ?");
 				rl.prompt();
@@ -38,7 +39,7 @@ rl.on('line', reply => {
 				
 			case 'CurrentWeather':
 				(async () => {
-					var weath = await getWeather(cb.entities.city);
+					var weath = await getWeather(cb.entities.city, 3);
 					if(weath != 'Error'){
 						console.log(" Here's the current condition in " + cb.entities.city + " : " + weath.current.condition.text);
 						
@@ -53,6 +54,37 @@ rl.on('line', reply => {
 					else{console.log(' Error 404 : City Not Found.');}
 					rl.prompt();
 				})();
+				
+				break;
+			
+			case 'WeatherForecast':
+				var days = 3;
+				if(cb.entities.time == 'tomorrow') days = 1;
+				else if(cb.entities.time == 'the day after tomorrow') days = 2;
+				(async () => {
+					var weath = await getWeather(cb.entities.city, days);
+					if(weath != 'Error'){
+						// Hot / Cold
+						if('hotcold'.includes(cb.entities.weather)){
+							var temp = weath.forecast.forecastday[0].day.avgtemp_c;
+							if(days == 3) temp = weath.current.temp_c; // If today.
+							if(temp < 5 && cb.entities.weather == 'cold') console.log(' Yes');
+							else if(temp > 29 && cb.entities.weather == 'hot') console.log(' Yes');
+							else console.log(" No, here's the actual temperature : " + temp + ".");
+						}
+						// Rain / Sun / Thunder etc..
+						else{
+							var cond = weath.forecast.forecastday[0].day.condition.text;
+							if(days == 3) temp = weath.current.condition.text; // If today.
+							if(cond.toLowerCase().includes(cb.entities.weather)) console.log(' Yes');
+							else console.log(" No, here's the actual condition : " + cond + ".");
+						}
+					}
+					
+					else{console.log(' Error 404 : City Not Found.');}
+					rl.prompt();
+				})();
+				
 				break;
 				
 			default: {

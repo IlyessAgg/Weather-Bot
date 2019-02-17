@@ -2,7 +2,7 @@
 const axios = require("axios");
 const apikey = '827c2fe476704a54b79180025191002';
 
-const getWeather = location => {
+const getWeather = (location, nbDays) => {
 	return new Promise(async (resolve, reject) => {
 		try {
 			const weatehrConditions = await axios.get(
@@ -11,7 +11,7 @@ const getWeather = location => {
 				params: {
 					key: apikey,
 					q: location,
-					days: 3
+					days: nbDays
 				}
 			});
 			
