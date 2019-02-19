@@ -46,3 +46,7 @@
 > Bye
  See you another time ;)
 ```
+
+## Licence
+
+[Uncopyrighted](http://zenhabits.net/uncopyright/)
