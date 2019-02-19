@@ -1,8 +1,8 @@
 # Weather-Bot
 > Get the current weather anywhere in the world.
+![weather](http://wallpaperswide.com/download/rainy_weather-wallpaper-1366x768.jpg)
 
-## Objective
-Implementation of a weather bot using Nodejs.
+## How To Use
 
 ## Usage
 Here's how you should ask the current weather : ```What is the weather like in Paris```\
