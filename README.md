@@ -24,12 +24,19 @@
 
 
 ## Usage
-```> What is the weather like in Paris
- Here's the current condition in Paris : Clear
- It's pretty cold !Temperatures are around 4 degrees.
 ```
-
-It can also respond to questions like this : ```Will it rain in Paris tomorrow```\
+> Hello Bot !
+ Hello there! I'm Ilyess's Bot :) What do you want from me ?
+> What is the weather like in Paris
+ Here's the current condition in Paris : Clear
+ It's pretty cold ! Temperatures are around 4 degrees.
+> Will it rain in Paris tomorrow
+ Yes
+> Will it be hot tomorrow in Paris
+ No, here's the actual temperature : 9.9
+> Bye
+ See you another time ;)
+```
 
 
 <p align="center">
