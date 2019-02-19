@@ -37,8 +37,3 @@
 > Bye
  See you another time ;)
 ```
-
-
-<p align="center">
-  <img src="Botusage.png" alt="UsageImage"/>
-</p>
