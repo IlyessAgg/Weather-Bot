@@ -13,15 +13,24 @@
 - Install dependencies :
 
 ```
-> npm i
+❯ npm i
 ```
 
 - Launch the app :
 
 ```
-> nodemon app.js
+❯ nodemon app.js
 ```
 
+## FAQ
+- **Here are some of the questions it can answer.**
+
+<pre><code>> What's the weather like in <i>city</i>
+</code></pre>
+<pre><code>> Will it be hot tomorrow in <i>city</i>
+</code></pre>
+<pre><code>> Will it be rainy in <i>city</i> the day after tomorrow
+</code></pre>
 
 ## Usage
 ```
